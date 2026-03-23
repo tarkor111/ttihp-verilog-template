@@ -27,7 +27,7 @@ module tt_um_reaction_game (
 
     // Assign outputs: reaction_time in binary to LEDs
     // When in IDLE, the last LED (bit 7) flashes.
-    assign uo_out = (ui_in == 8'b00000000)
+    assign uo_out = (!ui_in[0])
               ? 8'd50
               : ((state == IDLE) ? {led_flash, 7'b0} : reaction_time);
     
