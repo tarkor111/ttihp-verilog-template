@@ -1,18 +1,16 @@
 project:
-  title:        "Reaction Time Game"      # What people will see on the website
-  author: "tarkor111"
+  title:        "Reaction Time Game"
+  author:       "tarkor111"
   discord:      "taras4050"
   description:  "Measures button press reaction time and displays it in binary."
-  top_module:   "tt_um_reaction_game"     # MUST match your Verilog module name
-  languages:    "Verilog"
+  top_module:   "tt_um_reaction_game"
+  language:    "Verilog"
   clock_hz:     10000000
 
-
-  tiles: "1x1" 
+  tiles: "1x1"
   source_files:
     - "project.v"
 
-# How the 8 input pins (ui_in) are used
 inputs:
   - button          # ui_in[0]
   - none            # ui_in[1]
@@ -23,26 +21,51 @@ inputs:
   - none            # ui_in[6]
   - none            # ui_in[7]
 
-# How the 8 output pins (uo_out) are used
 outputs:
-  - bit 0           # uo_out[0] - LSB of reaction time
+  - bit 0           # uo_out[0]
   - bit 1           # uo_out[1]
   - bit 2           # uo_out[2]
   - bit 3           # uo_out[3]
   - bit 4           # uo_out[4]
   - bit 5           # uo_out[5]
   - bit 6           # uo_out[6]
-  - bit 7           # uo_out[7] - MSB / Flash LED
+  - bit 7           # uo_out[7]
 
-# How the 8 bidirectional pins (uio_in/out) are used
 bidirectional:
-  - none            # uio_out[0]
-  - none            # uio_out[1]
-  - none            # uio_out[2]
-  - none            # uio_out[3]
-  - none            # uio_out[4]
-  - none            # uio_out[5]
-  - none            # uio_out[6]
-  - none            # uio_out[7]
+  - none
+  - none
+  - none
+  - none
+  - none
+  - none
+  - none
+  - none
+
+  # Documentation-specific pinout description
+pinout:
+  ui[0]: "Start/Stop Button"
+  ui[1]: "unused"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+  uo[0]: "Reaction Time Bit 0 (LSB)"
+  uo[1]: "Reaction Time Bit 1"
+  uo[2]: "Reaction Time Bit 2"
+  uo[3]: "Reaction Time Bit 3"
+  uo[4]: "Reaction Time Bit 4"
+  uo[5]: "Reaction Time Bit 5"
+  uo[6]: "Reaction Time Bit 6"
+  uo[7]: "Reaction Time Bit 7 / Flash LED (MSB)"
+  uio[0]: "unused"
+  uio[1]: "unused"
+  uio[2]: "unused"
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
 
 yaml_version: 6
