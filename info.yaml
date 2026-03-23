@@ -45,5 +45,4 @@ bidirectional:
   - none            # uio_out[6]
   - none            # uio_out[7]
 
-
-  yaml_version: 6
+yaml_version: 6
