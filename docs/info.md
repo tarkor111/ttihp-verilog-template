@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+It should flash an LED, after which the user must press the button as quickly as possible. Then the reaction time will be displayed in seconds on the 7-segment display.
 
 ## How to test
 
-Explain how to use your project
+It uses 8 output pins, the button, clock is 10 MHz. 
 
 ## External hardware
 
